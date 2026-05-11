@@ -1,0 +1,89 @@
+aid: vertica
+name: Vertica
+description: >-
+  Vertica (now branded OpenText Analytics Database) is a high-performance,
+  columnar, MPP analytics database designed for petabyte-scale data warehousing,
+  data lakehouse, and advanced analytics workloads across on-premises, cloud,
+  and Kubernetes deployments. The platform delivers in-database machine
+  learning, geospatial and time-series analytics, separation of storage and
+  compute, and broad SQL compatibility. Vertica exposes a REST API via the
+  Node Management Agent (NMA) for programmatic cluster and database operations
+  authenticated with mutual TLS.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Database
+  - Analytics Database
+  - Data Warehouse
+  - Data Lakehouse
+  - Columnar Database
+  - MPP
+  - In-Database Machine Learning
+  - SQL
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/vertica/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: vertica:node-management-agent-api
+    name: Vertica Node Management Agent API
+    description: >-
+      REST API exposed by the Vertica Node Management Agent (NMA) on every
+      database node for administering clusters, databases, and nodes. The NMA
+      listens on port 5554, authenticates clients via mutual TLS, and publishes
+      its own Swagger documentation at the /api-docs/ endpoint.
+    humanURL: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/
+    baseURL: https://<node-host>:5554
+    tags:
+      - Node Management
+      - Cluster Administration
+      - REST
+      - mTLS
+    properties:
+      - type: Documentation
+        url: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/
+      - type: Endpoints Reference
+        url: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/nma-endpoints/
+      - type: OpenAPI
+        url: https://<node-host>:5554/api-docs/nma_swagger.json
+      - type: Authentication
+        url: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/custom-certificates/
+  - aid: vertica:management-console-api
+    name: Vertica Management Console REST API
+    description: >-
+      Agent-backed REST API used by Vertica Management Console for monitoring,
+      provisioning, and managing Vertica databases and clusters. Returns JSON
+      responses for node, database, and cluster operations.
+    humanURL: https://docs.vertica.com/latest/en/connecting-to/management-api/rest-apis-agent/
+    baseURL: https://<management-host>:5444
+    tags:
+      - Management Console
+      - Monitoring
+      - Provisioning
+    properties:
+      - type: Documentation
+        url: https://docs.vertica.com/latest/en/connecting-to/management-api/rest-apis-agent/
+
+common:
+  - type: Website
+    url: https://www.vertica.com
+  - type: Product Page
+    url: https://www.opentext.com/products/analytics-database
+  - type: Documentation
+    url: https://docs.vertica.com/
+  - type: Community Edition
+    url: https://docs.vertica.com/latest/en/getting-started/community-edition-ce/
+  - type: Community
+    url: https://community.opentext.com/data-analytics/analytics-db
+  - type: GitHub Organization
+    url: https://github.com/vertica
+  - type: GitHub vcluster
+    url: https://github.com/vertica/vcluster
+  - type: Support
+    url: https://www.opentext.com/support
+  - type: Parent Company
+    url: https://www.opentext.com/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
