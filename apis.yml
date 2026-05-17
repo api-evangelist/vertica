@@ -76,7 +76,7 @@ common:
     url: https://docs.vertica.com/latest/en/getting-started/community-edition-ce/
   - type: Community
     url: https://community.opentext.com/data-analytics/analytics-db
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/vertica
   - type: GitHub vcluster
     url: https://github.com/vertica/vcluster
