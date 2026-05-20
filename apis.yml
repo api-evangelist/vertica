@@ -66,6 +66,8 @@ apis:
         url: https://docs.vertica.com/latest/en/connecting-to/management-api/rest-apis-agent/
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/vertica-co
   - type: Website
     url: https://www.vertica.com
   - type: Product Page
