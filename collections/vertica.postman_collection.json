@@ -1,0 +1,220 @@
+{
+  "item": [
+    {
+      "id": "ba8a9d82-f93b-4128-bbc7-9e1dcc39b052",
+      "name": "Health",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0a0c3076-3c43-487b-b0dd-7ed70e2bfab4",
+          "name": "Health check",
+          "request": {
+            "name": "Health check",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "health"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{node}}",
+                  "key": "node"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2f50fbee-dc32-4ffa-a263-8ce407b8af5e",
+              "name": "NMA is healthy",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "health"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{node}}",
+                      "key": "node"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"healthy\": \"true\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "185d3130-1ce2-476c-aa53-7c96516d3cf0",
+      "name": "Lifecycle",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4672eb67-d815-4a82-a3e4-b4abf79a33f1",
+          "name": "Stop the Node Management Agent service",
+          "request": {
+            "name": "Stop the Node Management Agent service",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "nma",
+                "shutdown"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{node}}",
+                  "key": "node"
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f6643b17-f124-412d-9098-a482fa287d5b",
+              "name": "Shutdown accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "nma",
+                    "shutdown"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{node}}",
+                      "key": "node"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "localhost",
+      "key": "node"
+    },
+    {
+      "type": "string",
+      "value": "https://{{node}}:5554",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "ef94675d-8376-48e1-ad05-cc60e2bc2bd1",
+    "name": "Vertica Node Management Agent (NMA) API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Vertica Node Management Agent (NMA) exposes a REST API for\nprogrammatic cluster and database operations. The agent listens on\nport 5554 and runs on every node in the cluster. Authentication uses\nmutual TLS with client certificates generated during the Vertica\ninstallation process.\n\n\nContact Support:\n Name: Vertica NMA Documentation",
+      "type": "text/plain"
+    }
+  }
+}
