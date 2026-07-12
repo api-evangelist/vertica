@@ -66,6 +66,10 @@ apis:
         url: https://docs.vertica.com/latest/en/connecting-to/management-api/rest-apis-agent/
 
 common:
+  - type: DomainSecurity
+    url: security/vertica-domain-security.yml
+  - type: Authentication
+    url: authentication/vertica-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/showcase/vertica-co
   - type: Website

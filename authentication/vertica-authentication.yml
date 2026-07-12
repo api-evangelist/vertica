@@ -1,0 +1,12 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/vertica-openapi.yml
+summary:
+  types:
+  - mutualTLS
+schemes:
+- name: mtls
+  type: mutualTLS
+  description: Mutual TLS using NMA client/server certificates
+  sources:
+  - openapi/vertica-openapi.yml
