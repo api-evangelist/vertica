@@ -66,6 +66,8 @@ apis:
         url: https://docs.vertica.com/latest/en/connecting-to/management-api/rest-apis-agent/
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/vertica-agentic-access.yml
   - type: DomainSecurity
     url: security/vertica-domain-security.yml
   - type: Authentication
