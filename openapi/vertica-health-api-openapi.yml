@@ -1,29 +1,36 @@
 openapi: 3.1.0
 info:
-  title: Vertica Node Management Agent (NMA) API
+  title: Vertica Node Management Agent (NMA) Health API
   version: '1'
-  description: |
-    The Vertica Node Management Agent (NMA) exposes a REST API for
+  description: 'The Vertica Node Management Agent (NMA) exposes a REST API for
+
     programmatic cluster and database operations. The agent listens on
+
     port 5554 and runs on every node in the cluster. Authentication uses
+
     mutual TLS with client certificates generated during the Vertica
+
     installation process.
+
+    '
   contact:
     name: Vertica NMA Documentation
     url: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/
 servers:
-  - url: https://{node}:5554
-    description: NMA endpoint on a Vertica node
-    variables:
-      node:
-        default: localhost
+- url: https://{node}:5554
+  description: NMA endpoint on a Vertica node
+  variables:
+    node:
+      default: localhost
+security:
+- mtls: []
 tags:
-  - name: Health
-  - name: Lifecycle
+- name: Health
 paths:
   /v1/health:
     get:
-      tags: [Health]
+      tags:
+      - Health
       summary: Health check
       operationId: getHealth
       responses:
@@ -37,18 +44,8 @@ paths:
                   healthy:
                     type: string
                     example: 'true'
-  /v1/nma/shutdown:
-    put:
-      tags: [Lifecycle]
-      summary: Stop the Node Management Agent service
-      operationId: shutdownNma
-      responses:
-        '200':
-          description: Shutdown accepted
 components:
   securitySchemes:
     mtls:
       type: mutualTLS
       description: Mutual TLS using NMA client/server certificates
-security:
-  - mtls: []
