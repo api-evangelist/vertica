@@ -10,7 +10,19 @@ description: >-
   Node Management Agent (NMA) for programmatic cluster and database operations
   authenticated with mutual TLS.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vertica.png
 tags:
   - Database
   - Analytics Database
@@ -26,45 +38,56 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: vertica:node-management-agent-api
-    name: Vertica Node Management Agent API
-    description: >-
-      REST API exposed by the Vertica Node Management Agent (NMA) on every
-      database node for administering clusters, databases, and nodes. The NMA
-      listens on port 5554, authenticates clients via mutual TLS, and publishes
-      its own Swagger documentation at the /api-docs/ endpoint.
-    humanURL: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/
-    baseURL: https://<node-host>:5554
-    tags:
-      - Node Management
-      - Cluster Administration
-      - REST
-      - mTLS
-    properties:
-      - type: Documentation
-        url: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/
-      - type: Endpoints Reference
-        url: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/nma-endpoints/
-      - type: OpenAPI
-        url: https://<node-host>:5554/api-docs/nma_swagger.json
-      - type: Authentication
-        url: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/custom-certificates/
-  - aid: vertica:management-console-api
-    name: Vertica Management Console REST API
-    description: >-
-      Agent-backed REST API used by Vertica Management Console for monitoring,
-      provisioning, and managing Vertica databases and clusters. Returns JSON
-      responses for node, database, and cluster operations.
-    humanURL: https://docs.vertica.com/latest/en/connecting-to/management-api/rest-apis-agent/
-    baseURL: https://<management-host>:5444
-    tags:
-      - Management Console
-      - Monitoring
-      - Provisioning
-    properties:
-      - type: Documentation
-        url: https://docs.vertica.com/latest/en/connecting-to/management-api/rest-apis-agent/
-
+- aid: vertica:management-console-api
+  name: Vertica Management Console REST API
+  description: >-
+    Agent-backed REST API used by Vertica Management Console for monitoring, provisioning, and managing
+    Vertica databases and clusters. Returns JSON responses for node, database, and cluster operations.
+  humanURL: https://docs.vertica.com/latest/en/connecting-to/management-api/rest-apis-agent/
+  baseURL: https://<management-host>:5444
+  tags:
+  - Management Console
+  - Monitoring
+  - Provisioning
+  properties:
+  - type: Documentation
+    url: https://docs.vertica.com/latest/en/connecting-to/management-api/rest-apis-agent/
+- aid: vertica:vertica-health-api
+  name: Vertica Health API
+  description: The Health API from Vertica — 1 operation(s) for health.
+  humanURL: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/
+  baseURL: https://<node-host>:5554
+  tags:
+  - Health
+  properties:
+  - type: OpenAPI
+    url: openapi/vertica-health-api-openapi.yml
+  - type: Documentation
+    url: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/
+  - type: Endpoints Reference
+    url: >-
+      https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/nma-endpoints/
+  - type: Authentication
+    url: >-
+      https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/custom-certificates/
+- aid: vertica:vertica-lifecycle-api
+  name: Vertica Lifecycle API
+  description: The Lifecycle API from Vertica — 1 operation(s) for lifecycle.
+  humanURL: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/
+  baseURL: https://<node-host>:5554
+  tags:
+  - Lifecycle
+  properties:
+  - type: OpenAPI
+    url: openapi/vertica-lifecycle-api-openapi.yml
+  - type: Documentation
+    url: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/
+  - type: Endpoints Reference
+    url: >-
+      https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/nma-endpoints/
+  - type: Authentication
+    url: >-
+      https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/custom-certificates/
 common:
   - type: AgenticAccess
     url: agentic-access/vertica-agentic-access.yml
