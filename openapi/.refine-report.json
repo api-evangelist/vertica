@@ -1,0 +1,16 @@
+{
+  "provider": "vertica",
+  "sources": [
+    "vertica-health-api-openapi.yml",
+    "vertica-lifecycle-api-openapi.yml"
+  ],
+  "outputs": [
+    "vertica-health-api-openapi.yml",
+    "vertica-lifecycle-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
