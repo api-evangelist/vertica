@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Vertica Node Management Agent (NMA) Health Lifecycle API",
+    "version": "1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Lifecycle",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Stop the Node Management Agent service",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{node}:5554/v1/nma/shutdown"
+          },
+          "docs": "Stop the Node Management Agent service"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

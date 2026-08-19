@@ -1,0 +1,120 @@
+{
+  "item": [
+    {
+      "id": "d3793ea9-7fb0-4616-abe8-04e1eda763ba",
+      "name": "Lifecycle",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c9d78742-d6ce-49d6-b8f5-4224cd15a4e0",
+          "name": "Stop the Node Management Agent service",
+          "request": {
+            "name": "Stop the Node Management Agent service",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "nma",
+                "shutdown"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{node}}",
+                  "key": "node"
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c27fb5da-f7d5-4366-bff0-0a406d7a099f",
+              "name": "Shutdown accepted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "nma",
+                    "shutdown"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{node}}",
+                      "key": "node"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "localhost",
+      "key": "node"
+    },
+    {
+      "type": "string",
+      "value": "https://{{node}}:5554",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "09de0234-d461-43a7-af5b-23f34218fcf6",
+    "name": "Vertica Node Management Agent (NMA) Health Lifecycle API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Vertica Node Management Agent (NMA) exposes a REST API for\nprogrammatic cluster and database operations. The agent listens on\nport 5554 and runs on every node in the cluster. Authentication uses\nmutual TLS with client certificates generated during the Vertica\ninstallation process.\n\n\nContact Support:\n Name: Vertica NMA Documentation",
+      "type": "text/plain"
+    }
+  }
+}

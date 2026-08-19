@@ -1,0 +1,130 @@
+{
+  "item": [
+    {
+      "id": "4e343d0a-f07f-4df7-8c54-0e03506c05c9",
+      "name": "Health",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7275fa7a-afff-443f-9ff5-b17df037f07b",
+          "name": "Health check",
+          "request": {
+            "name": "Health check",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "health"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{node}}",
+                  "key": "node"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "46c98784-40ac-4ffd-b35d-7f1486476fb5",
+              "name": "NMA is healthy",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "health"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{node}}",
+                      "key": "node"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"healthy\": \"true\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "localhost",
+      "key": "node"
+    },
+    {
+      "type": "string",
+      "value": "https://{{node}}:5554",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d97895a3-7f25-4ce3-bb87-872e39681524",
+    "name": "Vertica Node Management Agent (NMA) Health API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Vertica Node Management Agent (NMA) exposes a REST API for\nprogrammatic cluster and database operations. The agent listens on\nport 5554 and runs on every node in the cluster. Authentication uses\nmutual TLS with client certificates generated during the Vertica\ninstallation process.\n\n\nContact Support:\n Name: Vertica NMA Documentation",
+      "type": "text/plain"
+    }
+  }
+}
