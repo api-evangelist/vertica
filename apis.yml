@@ -31,6 +31,7 @@ accessModel:
   confidence: medium
   source:
   - authentication
+  - {url: 'https://www.vertica.com', status: 301, note: 'declared website redirects to https://www.rocketsoftware.com/en-us/products/vertica?o=vert — a different registrable domain (vertica.com -> rocketsoftware.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vertica.png
