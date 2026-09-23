@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Vertica Node Management Agent (NMA) Health API
   version: '1'
@@ -10,9 +10,7 @@ info:
 
     mutual TLS with client certificates generated during the Vertica
 
-    installation process.
-
-    '
+    installation process.'
   contact:
     name: Vertica NMA Documentation
     url: https://docs.vertica.com/latest/en/admin/managing-db/node-management-agent/

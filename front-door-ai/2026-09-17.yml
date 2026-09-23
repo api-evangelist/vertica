@@ -1,0 +1,33 @@
+# Front Door AI Index — vertica — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: vertica
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.vertica.com
+  final_host: www.rocketsoftware.com
+  ownership: own
+  owner: vertica
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 35
+  host_score: 35
+  density: 14.39
+  words: 2432
+  tiers:
+    agentic: 3
+    core: 32
+    model: 0
+  ambiguous: 14
+  top_terms:
+    AI: 20
+    predictive: 8
+    ML: 5
+    machine learning: 5
+    agentic: 3
+    automation: 3
+    gen ai: 2
+    intelligence: 2
+    smart: 1
