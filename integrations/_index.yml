@@ -64,5 +64,5 @@
     quality:
     - silver
     builder: 'community (Meltano Hub variant maintainers: full360)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
